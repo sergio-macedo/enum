@@ -7,7 +7,7 @@ public class HourContract {
     private Double valuePerHour;
     private Integer hours;
 
-    public HourContract(){
+    public HourContract() {
 
     }
 
@@ -40,7 +40,8 @@ public class HourContract {
     public void setHours(Integer hours) {
         this.hours = hours;
     }
+
     public Double totalValue() {
-        return valuePerHour*hours;
+        return valuePerHour * hours;
     }
 }

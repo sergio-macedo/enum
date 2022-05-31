@@ -69,7 +69,7 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public Double income (int year, int month) {
+    public Double income(int year, int month) {
         double sum = baseSalary;
         Calendar cal = Calendar.getInstance();
         for (HourContract c : contracts) {

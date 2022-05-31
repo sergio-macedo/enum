@@ -74,7 +74,7 @@ public class Post {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(title + "\n" );
+        sb.append(title + "\n");
         sb.append(likes);
         sb.append(" Likes - ");
         sb.append(sdf.format(moment) + "\n");
