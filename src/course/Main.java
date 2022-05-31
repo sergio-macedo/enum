@@ -18,9 +18,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        System.out.print("Enter department's name");
+        System.out.print("Enter department's name: ");
         String departmentName = sc.nextLine();
-        System.out.print("Enter worker data");
+        System.out.println("Enter worker data");
+        System.out.print("Name");
         String workerName = sc.nextLine();
         System.out.print("Level");
         String workerLevel = sc.nextLine();
@@ -44,7 +45,13 @@ public class Main {
         System.out.println();
         System.out.println("Enter month and year to calculate income (MM/YYYY): ");
         String monthAndYear =sc.next();
-        int month =
+        int month = Integer.parseInt(monthAndYear.substring(0,2));
+        int year = Integer.parseInt(monthAndYear.substring(3));
+
+        System.out.println("Name:" + worker.getName());
+        System.out.println("Department: " + worker.getDepartment().getName());
+        System.out.println("Income for" + monthAndYear + ": " + worker.income(year,month));
+        sc.close();
 
     }
 }
