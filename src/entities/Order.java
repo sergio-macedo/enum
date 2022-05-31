@@ -9,6 +9,8 @@ public class Order {
     private Date moment;
     private OrderStatus status;
 
+    private OrderItem orderItem;
+
     public Order() {
 
     }
@@ -43,12 +45,11 @@ public class Order {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", moment=" + moment +
-                ", status=" + status +
-                '}';
+    public void addItem(OrderItem orderItem) {
+
     }
+    public void removeItem (OrderItem orderItem){
+
+    }
+
 }
