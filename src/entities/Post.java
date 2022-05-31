@@ -66,4 +66,15 @@ public class Post {
     public void removeComment(Comment comment) {
         comments.remove(comment);
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "moment=" + moment +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", likes=" + likes +
+                ", comments=" + comments +
+                '}';
+    }
 }
