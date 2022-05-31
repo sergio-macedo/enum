@@ -35,7 +35,7 @@ public class Main {
             System.out.println("Enter contract # " + i + "data:");
             System.out.println("Date (DD/MM/YYYY)");
             Date contractDate = sdf.parse(sc.next());
-            System.out.print("Valeu per hour: ");
+            System.out.print("Value per hour: ");
             double valuePerHour = sc.nextDouble();
             System.out.print("Duration (hours): ");
             int hours = sc.nextInt();
