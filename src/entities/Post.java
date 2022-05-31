@@ -1,10 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Post {
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
     private Date moment;
     private String title;
     private String content;
@@ -69,12 +73,16 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
-                "moment=" + moment +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", likes=" + likes +
-                ", comments=" + comments +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append(title + "/n" );
+        sb.append(likes);
+        sb.append(" Likes - ");
+        sb.append(sdf.format(moment) + "/n");
+        sb.append(content + "/n");
+        sb.append("comments " + "/n");
+        for (Comment c : comments) {
+            sb.append(c.getText());
+        }
+        return sb.toString();
     }
 }

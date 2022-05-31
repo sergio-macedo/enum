@@ -2,6 +2,7 @@ package entities;
 
 public class Comment {
     private String text;
+
     public Comment() {
 
     }
@@ -18,10 +19,4 @@ public class Comment {
         this.text = text;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "text='" + text + '\'' +
-                '}';
-    }
 }
